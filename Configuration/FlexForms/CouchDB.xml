@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+	<ROOT>
+		<type>array</type>
+		<el>
+			<uri>
+				<TCEforms>
+          <label>Couch DB URI</label>
+					<config>
+						<type>input</type>
+						<eval>trim</eval>
+						<size>100</size>
+					</config>
+				</TCEforms>
+			</uri>
+			<name>
+				<TCEforms>
+          <label>Couch DB URI</label>
+					<config>
+						<type>input</type>
+						<eval>trim</eval>
+						<size>40</size>
+					</config>
+				</TCEforms>
+			</name>
+			<password>
+				<TCEforms>
+          <label>Couch DB URI</label>
+					<config>
+						<type>input</type>
+						<eval>trim</eval>
+						<size>40</size>
+					</config>
+				</TCEforms>
+			</password>
+		</el>
+	</ROOT>
+</T3DataStructure>

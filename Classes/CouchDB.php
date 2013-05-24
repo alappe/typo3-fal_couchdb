@@ -28,6 +28,7 @@ namespace Zimmer7\FalCouchdb;
 /**
  *
  * @author Andreas Lappe <nd@kaeufli.ch>
+ * @author Stefan Isak <mail@stefanisak.com>
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
 class CouchDB {
@@ -67,7 +68,7 @@ class CouchDB {
 	 * Get meta data
 	 *
 	 * @param string $path Path to receive information from
-	 * @param bool $list When set to true, this method returns information from all files in a directory. When set to false it will only return infromation from the specified directory.
+	 * @param bool $list When set to true, this method returns information from all files in a directory. When set to false it will only return information from the specified directory.
 	 * @param string $hash If a hash is supplied, this method simply returns true if nothing has changed since the last request. Good for caching.
 	 * @param int $fileLimit Maximum number of file-information to receive
 	 * @param string $root Use this to override the default root path (sandbox/dropbox)

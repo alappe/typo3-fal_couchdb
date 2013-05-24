@@ -8,7 +8,7 @@
 		<el>
 			<uri>
 				<TCEforms>
-          <label>Couch DB URI</label>
+					<label>Couch DB URI</label>
 					<config>
 						<type>input</type>
 						<eval>trim</eval>
@@ -16,9 +16,19 @@
 					</config>
 				</TCEforms>
 			</uri>
+			<database>
+				<TCEforms>
+					<label>Database</label>
+					<config>
+						<type>input</type>
+						<eval>trim</eval>
+						<size>100</size>
+					</config>
+				</TCEforms>
+			</database>
 			<name>
 				<TCEforms>
-          <label>Couch DB URI</label>
+					<label>name</label>
 					<config>
 						<type>input</type>
 						<eval>trim</eval>
@@ -28,7 +38,7 @@
 			</name>
 			<password>
 				<TCEforms>
-          <label>Couch DB URI</label>
+					<label>password</label>
 					<config>
 						<type>input</type>
 						<eval>trim</eval>

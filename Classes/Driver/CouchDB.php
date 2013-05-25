@@ -90,6 +90,19 @@ class CouchDB extends \TYPO3\CMS\Core\Resource\Driver\AbstractDriver {
 		$folders = array();
 		$files = array();
 		$info = $this->getMetaData($path);
+
+		foreach ($info as $row) {
+			$folder = array(
+				'ctime' => time(),
+				'mtime' => time(),
+				'name' => trim($row->value->name, '/'),
+				'identifier' => $row->id
+			);
+			$folders[] = $folder;
+		}
+		return $folders;
+
+		/*
 		foreach($info['contents'] as $entry) {
 			if($entry['is_dir']) {
 				$folder['ctime'] = time();
@@ -117,6 +130,7 @@ class CouchDB extends \TYPO3\CMS\Core\Resource\Driver\AbstractDriver {
 			return $folders;
 		}
 		return array();
+		 */
 	}
 
 	/**

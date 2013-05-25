@@ -75,26 +75,33 @@ class CouchDB {
 	 * @return array file or folder informations
 	 */
 	public function getMetaData($path, $list = true, $hash = null, $fileLimit = null, $root = null) {
+		$folders = array();
+		$files = array();
 		try {
-			$response = Utility\Http::get($this->getUrl());		
+			$response = Utility\Http::get($this->getUrl($path));
 			$response = json_decode($response);
 		} catch (Exception $e) {
 			throw $e;
 		}
-		return array();
+
+		return $response->rows;
 	}
 
 	/**
 	 * Get url
 	 *
+	 * @param \string $path
 	 * @return \string
 	 */
-	private function getUrl() {
+	private function getUrl($path) {
 		$url = '';
-		$url .= $this->uri . '/' . $this->database;
+
+		$url .= $this->uri . '/' . $this->database . '/_design/directories/_view/list3?key="' . $path . '"';
+
 		if (!empty($this->name) && !empty($this->password)) {
 			$url .= str_replace('://', '://' . $this->name . ':' . $this->password . '@');
 		}
+
 		return $url;
 	}
 
